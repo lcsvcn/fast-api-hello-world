@@ -11,6 +11,11 @@ class NumbersRequest(BaseModel):
     b: float
 
 
+@app.get('/')
+async def hello_world():
+    return "Sua primeira API em Fast Api"
+
+
 @app.get('/hello_world')
 async def hello_world():
     return {'mensagem': 'hello world'}
@@ -30,4 +35,4 @@ async def sum(
     return request.a - request.b
 
 if __name__ == "__main__":
-    uvicorn.run("api.application:app", reload=True)
+    uvicorn.run("application:app", reload=True)
