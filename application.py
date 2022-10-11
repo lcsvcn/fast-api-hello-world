@@ -12,7 +12,7 @@ class NumbersRequest(BaseModel):
 
 
 @app.get('/')
-async def hello_world():
+async def root():
     return "Sua primeira API em Fast Api"
 
 
