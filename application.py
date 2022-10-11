@@ -27,9 +27,9 @@ async def sum(
 ):
     return request.a + request.b
 
-
+# nome da funcao aparece no /docs
 @app.post('/subtrair')
-async def sum(
+async def subtract(
     request: NumbersRequest,
 ):
     return request.a - request.b
